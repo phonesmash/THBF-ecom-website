@@ -1,87 +1,73 @@
 body,
 html {
     height: 100%;
-    /* Ensure the html and body are full height */
+    /* Ensures the body takes up the full height of the viewport */
     margin: 0;
-    /* Remove default margin */
-    overflow: hidden;
-    /* Optional: Prevent scrolling on the entire page */
+    /* Removes default margin */
+    font-family: Arial, sans-serif;
+    /* Sets default font for the webpage */
 }
 
-.body-bg {
-    background-image: url('bgball.jpg');
-    /* Replace with your actual image URL */
-    background-position: center center;
-    /* Center the image */
-    background-repeat: no-repeat;
-    /* No repeating of the image */
-    background-attachment: fixed;
-    /* Fix background during scroll */
-    background-size: cover;
-    /* Cover the entire viewport */
-    height: 100%;
-    /* Full height */
-    filter: blur(8px);
-    /* Apply blur effect */
-    -webkit-filter: blur(8px);
-    /* For Safari and Chrome */
-    width: 100vw;
-    /* Full width */
+body::before {
+    content: "";
+    /* Required for pseudo-elements */
     position: fixed;
-    /* Fix the position of pseudo-element */
-    z-index: -1;
-    /* Place the background behind content */
-}
-
-.overlay {
-    position: absolute;
-    /* Position it over the .body-bg */
+    /* Fixed position to cover the entire viewport */
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Black overlay with 50% opacity for dimming */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-image: url('bgball.jpg');
+    /* Replace 'your-image.jpg' with your actual image path */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* No repeating the image */
+    background-size: cover;
+    /* Ensures the image covers the entire area */
+    filter: blur(8px);
+    /* Applies blur effect */
+    -webkit-filter: blur(8px);
+    /* Ensures compatibility with WebKit browsers */
     z-index: -1;
-    /* Make sure it's under all content except the background */
+    /* Ensures it stays behind other content */
 }
 
-
-
-
-.services-title {
+.content {
+    /* Position the content inside the body */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* Ensures content is above the blurred background */
+    color: white;
     text-align: center;
-    /* Center the title horizontally */
-    font-weight: bold;
-    font-size: 50px;
-    /* Slightly larger font size for a bolder appearance */
-    font-family: 'Arial', sans-serif;
-    /* Choose a sophisticated typeface */
-    color: #ffffff;
-    /* A deep, rich navy blue for elegance */
-    padding: 60px 0;
-    padding-top: 100px;
-    /* Increased spacing for a more dramatic section separation */
-    text-transform: uppercase;
-    /* Capitalize letters for emphasis */
-    letter-spacing: 2px;
-    /* More spacing between letters for a luxurious feel */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    /* Soft shadow for a subtle 3D effect */
+    width: 80%;
+
+    /* Styling the content box */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    filter: none;
+    /* No blur on the content */
 }
 
 .service-box {
     margin: 5px;
     padding: 10px;
-    height: 400px;
-    margin-bottom: 50px;
     border: 1px solid #ccc;
-    background-color: #f4f3f3;
+    background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     font-size: 0.9rem;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
     /* Smooth transition for shadow and transform */
+    height: 400px;
+    margin-top: 100px;
 }
 
 .service-box:hover {
@@ -99,4 +85,19 @@ h4 {
 
 .des {
     font-size: 16px;
+}
+
+
+.service {
+    margin-top: 200px;
+    padding-bottom: 300px;
+}
+
+.servicestitle {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 65px;
+    color: whitesmoke;
+    font-weight: bold;
 }
