@@ -1,0 +1,152 @@
+/**Hero Section **/
+.hero-section {
+    background: url('bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+
+
+
+
+/**Services Section **/
+
+.narrow-container {
+    max-width: 1100px;
+    /* Adjust this value as needed */
+    padding-top: 75px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.narrow-container p {
+    padding-top: 20px;
+}
+
+.service-img {
+    height: auto;
+    /* Maintain aspect ratio */
+    width: 100%;
+    /* Make image responsive */
+    border-radius: 10px;
+}
+
+.service-img:hover {
+    transform: scale(1.05);
+    /* Slightly increase the size of the image on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    /* Add shadow for more pop */
+}
+
+.custom-gap>.col-md-6 {
+    padding-right: 40px;
+    /* Right padding for left column */
+    padding-left: 40px;
+    /* Left padding for right column */
+}
+
+
+
+
+
+
+/* More Service */
+.services-title {
+    text-align: center;
+    /* Center the title horizontally */
+    font-size: 36px;
+    /* Slightly larger font size for a bolder appearance */
+    font-family: 'Arial', sans-serif;
+    /* Choose a sophisticated typeface */
+    color: #2c3e50;
+    /* A deep, rich navy blue for elegance */
+    padding: 60px 0;
+    /* Increased spacing for a more dramatic section separation */
+    text-transform: uppercase;
+    /* Capitalize letters for emphasis */
+    letter-spacing: 2px;
+    /* More spacing between letters for a luxurious feel */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Soft shadow for a subtle 3D effect */
+}
+
+.service-box {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
+    /* Smooth transition for shadow and transform */
+}
+
+.service-box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Increased shadow for a lifted effect */
+    transform: translateY(-5px);
+    /* Slight upward move */
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+}
+
+.des {
+    font-size: 16px;
+}
+
+.snd-row {
+    max-width: 1000px;
+}
+
+
+
+
+
+/* Footer */
+
+.footer {
+    margin-top: 100px;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+    color: #3a3a3a;
+    border-top: 1px solid #e7e7e7;
+}
+
+.footer a {
+    color: #1e1e1e;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
